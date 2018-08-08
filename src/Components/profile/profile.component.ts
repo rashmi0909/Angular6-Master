@@ -43,6 +43,11 @@ public childDataService:string;
   }
 
 
+  onDataReceivedFromChild(data){
+    //this will be called when we receive data from the child
+  }
+
+
   onSubmitButtonClicked(){
     this.profileService.makeprofilecallservice().subscribe((r)=>{        
       this.profileResp = r.json();

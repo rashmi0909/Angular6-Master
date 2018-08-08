@@ -14,7 +14,7 @@ public childData:string = "";
 
 
 @Output()
- public passData  = new EventEmitter();
+ public passData  = new EventEmitter(); // this is the output to hear in the parent component
 
 
 @Input()
@@ -40,8 +40,7 @@ set dataOutput(val){
 
   searchbuttonclick(){
     console.log(this.headerInput);
-
-    this.profileService.setpassChildToParent(this.headerInput);
+    this.passData.emit(this.headerInput);
+    this.profileService.setpassChildToParent(this.headerInput); // we're using the service to pass data from child to parent
   }
-
 }
