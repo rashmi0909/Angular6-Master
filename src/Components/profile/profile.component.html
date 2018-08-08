@@ -1,0 +1,18 @@
+<div>
+{{childDataService}}
+{{childData}}
+  <div *ngFor="let y of list;">
+
+{{y}}
+  </div>
+  <app-profile-detail [dataOutput]="childData" ></app-profile-detail>
+
+    <div class="compo-css" *ngFor="let x of profileResp; let i = index;">
+
+      <app-profile-item [id]="x.id" [body]="x.body" [title]="x.title" [userid]="x.userId" [itemindex]="i"></app-profile-item>
+    
+
+      
+    </div> 
+
+</div>
